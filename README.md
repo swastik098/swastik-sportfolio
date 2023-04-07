@@ -8,7 +8,7 @@
 
 <!-- ![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yg7pbgnih9nziulfu3u9.gif) -->
 
-## View live demo [here](https://swastikgiri-portfolio.vercel.app/).
+## View live demo [here](https://swastikgiri.vercel.app/).
 
 ---
 

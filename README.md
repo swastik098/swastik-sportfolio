@@ -4,9 +4,9 @@
 
 ---
 
-# Demo :movie_camera:
+# Demo:
 
-<!-- ![](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/yg7pbgnih9nziulfu3u9.gif) -->
+![](https://ibb.co/NsFfW9Z)
 
 ## View live demo [here](https://swastikgiri.vercel.app/).
 

@@ -1,6 +1,6 @@
-import eight from "../assets/svg/projects/eight.svg";
-import seven from "../assets/svg/projects/seven.svg";
 import project1 from "../assets/project2tab.png";
+import Project2 from "../assets/DailyTechBlogs.png";
+import project3 from "../assets/Funstore.png";
 
 export const projectsData = [
   {
@@ -16,20 +16,22 @@ export const projectsData = [
   {
     id: 2,
     projectName: "project2",
-    projectDesc: "",
-    tags: [],
-    code: "",
-    demo: "",
-    image: seven,
+    projectDesc:
+      "Creating a modern and sleek blog using React.js, with functionalities such as post creation, editing, and categorization. Implementing a comment section with user authentication and authorization for secure and engaging discussions.",
+    tags: ["React JS"],
+    code: "https://github.com/swastik098/DailyTech-Blog",
+    demo: "https://daily-tech-blog.vercel.app/",
+    image: Project2,
   },
   {
     id: 3,
     projectName: "project3",
-    projectDesc: "",
-    tags: [],
-    code: "",
-    demo: "",
-    image: eight,
+    projectDesc:
+      "Designing a clean and modern user interface for an e-commerce site using React.js, with a focus on intuitive navigation and user experience. Creating responsive layouts, UI components, and design elements to enhance the overall aesthetics and functionality of the site.",
+    tags: ["React JS"],
+    code: "https://github.com/swastik098/E-commerce_site",
+    demo: "https://funhub-psi.vercel.app/",
+    image: project3,
   },
 ];
 

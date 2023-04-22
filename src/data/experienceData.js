@@ -5,6 +5,7 @@ export const experienceData = [
     jobtitle: "Software Engineer I",
     startYear: "April 2022",
     endYear: "Present",
-    description: "It is a health tech product-based startup provide API.",
+    description:
+      "It is a health tech product-based startup provide API to Parma industry.",
   },
 ];

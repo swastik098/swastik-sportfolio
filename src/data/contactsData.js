@@ -8,5 +8,4 @@ export const contactsData = {
   twitter: "https://twitter.com/swastikkk77",
   medium: "https://medium.com/@swastikrancodes",
   stackOverflow: "https://stackoverflow.com/users/19125442/swastik-ranjan-giri",
-  //   devUsername: "said7388",
 };

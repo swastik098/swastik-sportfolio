@@ -13,6 +13,7 @@ import ChangeTheme from "./components/helper/change-theme/change-theme";
 import ScrollToTop from "./components/helper/scroll-to-top";
 import { ThemeContext } from "./contexts/theme-context";
 import { BlogPage, HomePage, ProjectPage } from "./pages";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -30,6 +31,7 @@ function App() {
       </Router>
       <BackToTop />
       <ChangeTheme />
+      <Analytics />
     </div>
   );
 }

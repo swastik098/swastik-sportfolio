@@ -9,5 +9,5 @@ export const headerData = {
   image: img,
   imagebw: imgbg,
   resumePdf:
-    "https://drive.google.com/file/d/1b0C4qDP_nU0R5T3JG3Na5Ura1qKgcIl2/view?usp=share_link",
+    "https://drive.google.com/file/d/1fdb31D7cd7N6a7k-kdcmpcBxmyJeJLAJ/view?usp=share_link",
 };

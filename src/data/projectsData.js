@@ -1,21 +1,21 @@
-import project1 from "../assets/project2tab.png";
 import Project2 from "../assets/DailyTechBlogs.png";
 import project3 from "../assets/Funstore.png";
+import project1 from "../assets/project1.png";
 
 export const projectsData = [
   {
     id: 1,
-    projectName: "2Tab HealthOS",
+    projectName: "Vault Games Studio",
     projectDesc:
-      "2Tab HealthOS is the topmost trusted Indian Medicine Database integrated with Medicine database, Generic database,Food database and many more.",
-    tags: ["React Native", "Node Js", "MongoDB"],
-    code: "",
-    demo: "https://2tab.com/main/landingPage",
+      "I collaborated with Vault Games Studio to develop their portfolio website, contributing to the creation of an impactful online presence for the studio. Ensuring the website effectively showcased the studio's work, expertise, and unique offerings. This project allowed me to blend creativity and technical skills.",
+    tags: ["React JS"],
+    code: "https://github.com/swastik098/gamingwebiste",
+    demo: "https://vaultgaming.vercel.app/",
     image: project1,
   },
   {
     id: 2,
-    projectName: "project2",
+    projectName: "Daily Tech Blogs",
     projectDesc:
       "Creating a modern and sleek blog using React.js, with functionalities such as post creation, editing, and categorization. Implementing a comment section with user authentication and authorization for secure and engaging discussions.",
     tags: ["React JS"],
@@ -25,7 +25,7 @@ export const projectsData = [
   },
   {
     id: 3,
-    projectName: "project3",
+    projectName: "Funstore",
     projectDesc:
       "Designing a clean and modern user interface for an e-commerce site using React.js, with a focus on intuitive navigation and user experience. Creating responsive layouts, UI components, and design elements to enhance the overall aesthetics and functionality of the site.",
     tags: ["React JS"],

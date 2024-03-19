@@ -20,6 +20,11 @@ function ExperienceCard({
     experienceCard: {
       backgroundColor: theme.quaternary,
     },
+    descriptionText: {
+      color: theme.tertiary,
+      margin: "10px 0",
+      overflowWrap: "break-word",
+    },
   }));
 
   const classes = useStyles();
@@ -39,7 +44,7 @@ function ExperienceCard({
           </h6>
           <h4 style={{ color: theme.tertiary }}>{jobtitle}</h4>
           <h5 style={{ color: theme.tertiary }}>{company}</h5>
-          <h6 style={{ color: theme.tertiary }}>{description}</h6>
+          <h6 className={classes.descriptionText}>{description}</h6>
         </div>
       </div>
     </Fade>

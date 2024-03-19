@@ -22,7 +22,6 @@ function HomePage() {
       <About />
       <Experience />
       <Skills />
-      {/* <Certificate /> */}
       <Projects />
       <Education />
       {/* <Blog /> */}

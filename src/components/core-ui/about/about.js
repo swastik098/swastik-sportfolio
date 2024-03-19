@@ -60,7 +60,7 @@ function About() {
             </p>
           </div>
           <div className="about-animation">
-            {/* <AnimationLottie animationPath={codings} /> */}
+            <AnimationLottie animationPath={codings} />
           </div>
         </div>
       </Container>

@@ -7,7 +7,7 @@ export const projectsData = [
     id: 1,
     projectName: "Vault Games Studio",
     projectDesc:
-      "I collaborated with Vault Games Studio to develop their portfolio website, contributing to the creation of an impactful online presence for the studio. Ensuring the website effectively showcased the studio's work, expertise, and unique offerings. This project allowed me to blend creativity and technical skills.",
+      "I collaborated with Vault Games Studio to develop their portfolio website, contributing to the creation of an impactful online presence for the studio. Ensuring the website effectively showcased the studio's work, expertise, and unique offerings.",
     tags: ["React JS"],
     code: "https://github.com/swastik098/gamingwebiste",
     demo: "https://vaultgaming.vercel.app/",

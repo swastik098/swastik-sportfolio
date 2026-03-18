@@ -1,421 +1,126 @@
-# Developer Portfolio
+# Swastik Giri — Portfolio Website
 
-### Want to create a professional portfolio but cannot figure out how to? Use Developer Portfolio and create your own personalised portfolio today! our easily customisable, user friendly website is designed to cater to developers and freelancers a like.
-
----
-
-# Demo:
-
-![](https://ibb.co/NsFfW9Z)
-
-## View live demo [here](https://swastikgiri.vercel.app/).
+A production-grade personal portfolio website built with pure HTML, CSS, and vanilla JavaScript.
+No frameworks, no build tools, no dependencies — just fast, clean, deployable code.
 
 ---
 
-## Table of Contents :scroll:
-
-- [Sections](#sections-bookmark)
-- [Demo](#demo-movie_camera)
-- [Installation](#installation-arrow_down)
-- [Getting Started](#getting-started-dart)
-- [Folder Structure](#folder-structure-open_file_folder)
-- [Usage](#usage-joystick)
-- [Hosting](#hosting-globe_with_meridians)
-- [SEO](#seo-spider)
-- [Packages Used](#packages-used-package)
-- [APIs Used](#apis-used-world_map)
-- [Fonts and Images](#fonts-and-images-performing_arts)
-- [Upcoming Features](#upcoming-features-construction)
-- [Contributors](#contributors-man_technologistwoman_technologist)
-
----
-
-# Sections :bookmark:
-
-- HOME
-- ABOUT
-- RESUME
-  - EDUCATION
-  - SKILLS
-  - EXPERIENCE
-  - CERTIFICATES
-  - PROJECTS
-- BLOG
-- CONTACTS
-
----
-
-# Installation :arrow_down:
-
-### You will need to download Git and Node to run this project
-
-- [Git](https://git-scm.com/downloads)
-- [Node](https://nodejs.org/en/download/)
-
-## Also check [this](https://reactjs.org/docs/create-a-new-react-app.html) out if you are new to react.
-
-#### Make sure you have the latest version of both Git and Node on your computer.
+## 📁 File Structure
 
 ```
-node --version
-git --version
-```
-
-<br />
-
-# Getting Started :dart:
-
-### Fork and Clone the repo
-
-#### To Fork the repo click on the fork button at the top right of the page. Once the repo is forked open your terminal and perform the following commands
-
-```
-git clone https://github.com/<YOUR GITHUB USERNAME>/developer-portfolio.git
-
-cd developer-portfolio
-```
-
-### Clone with TypeScript
-
-```
-git clone -b typescript-version https://github.com/<YOUR GITHUB USERNAME>/developer-portfolio.git
-
-cd developer-portfolio
-```
-
-### Install packages from the root directory
-
-```
-npm install
-```
-
-#### or
-
-```
-yarn install
-```
-
-### Start the development server
-
-```
-npm start
-```
-
-#### or
-
-```
-yarn start
+swastik-portfolio/
+├── index.html              ← Main HTML (semantic, accessible)
+├── css/
+│   ├── reset.css           ← Box-sizing, element resets
+│   ├── variables.css       ← Design tokens (colors, spacing, fonts)
+│   ├── base.css            ← Body, container, typography, utilities
+│   ├── components.css      ← Cursor, loader, nav, buttons, forms, pills
+│   ├── sections.css        ← Hero, about, experience, skills, projects, contact, footer
+│   ├── animations.css      ← Fade-up, scroll-reveal, reduced-motion
+│   └── responsive.css      ← Tablet, mobile, print breakpoints
+└── js/
+    ├── utils.js            ← Shared helpers ($, debounce, lerp, etc.)
+    ├── loader.js           ← Page loading screen with progress bar
+    ├── cursor.js           ← Custom magnetic cursor
+    ├── nav.js              ← Scroll-aware nav, mobile menu, smooth scroll
+    ├── animations.js       ← Intersection Observer scroll reveals, parallax
+    ├── counter.js          ← Animated number counters
+    ├── form.js             ← Contact form validation & async submission
+    └── main.js             ← Entry point, year, lazy images, console Easter egg
 ```
 
 ---
 
-# Folder Structure :open_file_folder:
+## 🚀 Deploy to Vercel (Recommended)
 
-```bash
-╭ public
-│   ├── _redirects
-│   ├── favicon.ico
-│   ├── favicon.png
-│   ├── favicon512.png
-│   ├── index.html
-│   ├── manifest.json
-│   └── robots.txt
-├── src
-│   ├── App.css
-│   ├── App.js
-│   ├── assets
-│   │   ├── fonts
-│   │   │   └── Bestermind
-│   │   │       └── BestermindRegular.ttf
-│   │   ├── lottie
-│   │   │   └── coding.json
-│   │   │   └── development.json
-│   │   │   └── education.json
-│   │   └── svg
-│   │       ├── about
-│   │       ├── contacts
-│   │       ├── education
-│   │       ├── experience
-│   │       ├── projects
-│   │       ├── skills
-│   │       └── Social
-│   ├── components
-│   │   ├── About
-│   │   │   ├── About.css
-│   │   │   └── About.js
-│   │   ├── BackToTop
-│   │   │   ├── BackToTop.css
-│   │   │   └── BackToTop.js
-│   │   ├── Blog
-│   │   │   ├── Blog.css
-│   │   │   ├── Blog.js
-│   │   │   └── SingleBlog
-│   │   │       ├── SingleBlog.css
-│   │   │       └── SingleBlog.js
-│   │   ├── Contacts
-│   │   │   ├── Contacts.css
-│   │   │   └── Contacts.js
-│   │   ├── Education
-│   │   │   ├── Education.css
-│   │   │   ├── Education.js
-│   │   │   └── EducationCard.js
-│   │   ├── Experience
-│   │   │   ├── Experience.css
-│   │   │   ├── Experience.js
-│   │   │   └── ExperienceCard.js
-│   │   ├── Landing
-│   │   │   ├── Landing.css
-│   │   │   └── Landing.js
-│   │   ├── Navbar
-│   │   │   ├── Navbar.css
-│   │   │   └── Navbar.js
-│   │   ├── Projects
-│   │   │   ├── Projects.css
-│   │   │   ├── Projects.js
-│   │   │   └── SingleProject
-│   │   │       ├── SingleProject.css
-│   │   │       └── SingleProject.js
-│   │   ├── Skills
-│   │   │   ├── Skills.css
-│   │   │   └── Skills.js
-│   │   ├── Animation
-│   │   └── index.js
-│   ├── contexts
-│   │   └── ThemeContext.js
-│   ├── data
-│   │   ├── aboutData.js
-│   │   ├── blogData.js
-│   │   ├── contactsData.js
-│   │   ├── educationData.js
-│   │   ├── experienceData.js
-│   │   ├── headerData.js
-│   │   ├── projectsData.js
-│   │   ├── skillsData.js
-│   │   ├── socialsData.js
-│   │   └── themeData.js
-│   ├── index.css
-│   ├── index.js
-│   ├── pages
-│   │   ├── Blog
-│   │   │   ├── BlogPage.css
-│   │   │   └── Index.js
-│   │   ├── Home
-│   │   │   └── Index.js
-│   │   ├── Project
-│   │   │   ├── ProjectPage.css
-│   │   │   └── Index.js
-│   │   └── index.js
-│   ├── reportWebVitals.js
-│   ├── theme
-│   │   ├── images.js
-│   │   └── theme.js
-│   └── utils
-│       └── skillsImage.js
-├── .dockerignore
-├── .env.example
-├── docker-compose.yml
-├── Dpckerfile
-├── LICENSE
-├── README.md
-├── package.json
-└── yarn.lock
-```
+1. Go to [vercel.com](https://vercel.com) and sign up / log in
+2. Click **Add New → Project**
+3. Drag & drop the `swastik-portfolio` folder **or** upload via GitHub
+4. Click **Deploy** — that's it! ✅
+
+Vercel serves static HTML/CSS/JS with zero configuration.
 
 ---
 
-# Usage :joystick:
+## 🌐 Deploy to Netlify
 
-### Customize your details for each component in `src/data` [folder](https://github.com/hhhrrrttt222111/developer-portfolio/tree/master/src/data).
+1. Go to [netlify.com](https://netlify.com) and sign up / log in
+2. Drag & drop the `swastik-portfolio` folder onto the Netlify dashboard
+3. Your site is live instantly with a `.netlify.app` URL ✅
 
-Eg:
+---
+
+## 🐙 Deploy via GitHub Pages
+
+1. Push the folder contents to a GitHub repository
+2. Go to **Settings → Pages**
+3. Set **Source** to `main` branch, `/root` folder
+4. Save — your site will be at `https://yourusername.github.io/repo-name` ✅
+
+---
+
+## ✉️ Connecting the Contact Form
+
+The form currently simulates sending (for demo purposes). To make it real:
+
+### Option A — Formspree (Free, no backend needed)
+1. Sign up at [formspree.io](https://formspree.io)
+2. Create a new form and copy your endpoint ID
+3. In `js/form.js`, replace the `sendForm` function with:
 
 ```javascript
-export const headerData = {
-  name: "-- YOUR NAME --",
-  title: "-- YOUR TITLE --",
-  desciption: "-- DESCRIPTION --",
-  image: "-- IMAGE --",
-  resumePdf: "",
-};
-
-// You can also import image and PDF from assets as shown below
-
-import resume from "../assets/pdf/resume.pdf";
-import profileImg from "../assets/png/profileImg";
-
-export const headerData = {
-  name: "-- YOUR NAME --",
-  title: "-- YOUR TITLE --",
-  desciption: "-- DESCRIPTION --",
-  image: profileImg,
-  resumePdf: resume,
-};
+function sendForm(data) {
+  return fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify(data),
+  });
+}
 ```
 
-```javascript
-// EXAMPLE
-export const educationData = [
-  {
-    id: 1,
-    institution: "-- INSTITUTION NAME --",
-    course: "-- COURSE NAME --",
-    startYear: "2017",
-    endYear: "2019",
-  },
-  //
-];
-```
+### Option B — EmailJS (Client-side email)
+Follow the [EmailJS docs](https://www.emailjs.com/docs/) to send emails directly from JS.
 
 ---
 
-### Instructions and format for each section can be found inside the data files.
+## ✏️ Customisation
 
-<br />
-
-# Hosting :globe_with_meridians:
-
-## Netlify
-
-|                Site                 |                                                     Docs                                                     |                          Demo                          |
-| :---------------------------------: | :----------------------------------------------------------------------------------------------------------: | :----------------------------------------------------: |
-| [Netlify](https://www.netlify.com/) | [3 ways to deploy React apps to Netlify](https://blog.logrocket.com/3-ways-to-deploy-react-apps-to-netlify/) | [Youtube](https://www.youtube.com/watch?v=sGBdp9r2GSg) |
-
-## Firebase
-
-|                         Site                         |                                                           Docs                                                           |                          Demo                          |
-| :--------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------: |
-| [Firebase](https://firebase.google.com/docs/hosting) | [Deploy a React App with Firebase](https://medium.com/swlh/how-to-deploy-a-react-app-with-firebase-hosting-98063c5bf425) | [Youtube](https://www.youtube.com/watch?v=1wZw7RvXPRU) |
-
-## Heroku
-
-|               Site                |                                                                    Docs                                                                     |                          Demo                          |
-| :-------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------: |
-| [Heroku](https://www.heroku.com/) | [Deploying React App on Heroku from GitHub](https://medium.com/make-it-heady/deploying-create-react-app-on-heroku-from-github-49447561f670) | [Youtube](https://www.youtube.com/watch?v=dn4mmfbletg) |
-
-## Github Pages
-
-|                   Site                    |                                                     Docs                                                      |                  Demo                   |
-| :---------------------------------------: | :-----------------------------------------------------------------------------------------------------------: | :-------------------------------------: |
-| [GitHub Pages](https://pages.github.com/) | [Deploying React App on GitHub Pages from GitHub](https://create-react-app.dev/docs/deployment/#github-pages) | [Youtube](https://youtu.be/F8s4Ng-re0E) |
+| What to change         | Where                               |
+|------------------------|-------------------------------------|
+| Name, title, bio       | `index.html` — hero & about sections |
+| Colors & fonts         | `css/variables.css`                 |
+| Experience entries     | `index.html` — `#experience`        |
+| Projects               | `index.html` — `#projects`          |
+| Social links           | `index.html` — contact & footer     |
+| Form endpoint          | `js/form.js` → `sendForm()`         |
+| Meta / SEO tags        | `index.html` — `<head>`             |
 
 ---
 
-# SEO :spider:
+## ⚡ Performance
 
-### Search engine optimization (SEO) is the process of improving the quality and quantity of website traffic to a website or a web page from search engines.
-
-### Add the below code snippet to `public/index.html` with your site info. This step is not mandatory
-
-<br />
-
-```html
-<meta name="description" content="--- SITE DESCRIPTION ---" />
-<meta property="og:image" content="--- YOUR IMAGE ---" />
-<meta property="og:site_name" content="--- YOUR NAME ---" />
-<meta property="og:title" content="--- YOUR NAME ---" />
-<meta property="og:url" content="--- YOUR SITE URL ---" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="--- SITE DESCRIPTION ---" />
-<meta property="og:locale" content="---  ---" />
-<meta property="og:image" content="--- YOUR IMAGE ---" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<meta itemprop="name" content="--- YOUR NAME ---" />
-<meta itemprop="url" content="--- YOUR SITE URL ---" />
-<meta itemprop="description" content="--- SITE DESCRIPTION ---" />
-<meta itemprop="thumbnailUrl" content="" />
-<link rel="image_src" href="--- YOUR IMAGE ---" />
-<meta itemprop="image" content="--- YOUR IMAGE ---" />
-
-<meta name="twitter:site" content="@--- YOUR TWITTER USERNAME ---" />
-<meta name="twitter:creator" content="@--- YOUR TWITTER USERNAME ---" />
-<meta name="twitter:url" content="--- YOUR SITE URL ---" />
-<meta name="twitter:title" content="--- YOUR NAME ---" />
-<meta name="twitter:description" content="--- SITE DESCRIPTION ---" />
-<meta name="twitter:image" content="--- YOUR IMAGE ---" />
-<meta name="twitter:card" content="summary" />
-```
+- **Zero external JS dependencies**
+- **Google Fonts** loaded with `display=swap` (no layout shift)
+- Intersection Observer for lazy animations (no scroll jank)
+- Throttled scroll handlers
+- CSS animations use `transform` & `opacity` only (GPU accelerated)
+- Reduced-motion media query respected throughout
+- Print stylesheet included
 
 ---
 
-# Packages Used :package:
+## ♿ Accessibility
 
-|  Client Side Packages  |
-| :--------------------: |
-|   @material-ui/core    |
-|   @material-ui/icons   |
-|    @emailjs/browser    |
-|      react-lottie      |
-|   react-fast-marquee   |
-|      react-helmet      |
-|      react-icons       |
-|      react-reveal      |
-|    react-router-dom    |
-| react-router-hash-link |
-|      react-slick       |
-|     slick-carousel     |
-|       validator        |
+- Semantic HTML5 elements (`<nav>`, `<main>`, `<article>`, `<footer>`, `<dl>`)
+- ARIA labels on icon-only buttons and links
+- `role="list"` where `list-style: none` is applied
+- Live regions (`aria-live`) for form errors and success
+- Focus trap in mobile nav
+- `:focus-visible` outlines retained
+- Color contrast meets WCAG AA
 
 ---
 
-# Fonts and Images :performing_arts:
+## 📄 License
 
-## Icons
-
-- [Material Icons](https://material-ui.com/components/material-icons/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-
-## Fonts
-
-- [Poppins](https://fonts.google.com/specimen/Poppins)
-- [Montserrat](https://fonts.google.com/specimen/Montserrat)
-- [Raleway](https://fonts.google.com/specimen/Raleway)
-- [Big Shoulders Text](https://fonts.google.com/specimen/Big+Shoulders+Text)
-- [Bestermind](https://www.dafont.com/bestermind.font)
-- [Roboto](https://fonts.google.com/specimen/Roboto)
-
----
-
-<!--
-# Contributors :man_technologist::woman_technologist:
-
-<div>
-    <table>
-        <tr>
-            <td align="center"><a href="https://github.com/said7388"><img src="https://i.ibb.co/ZmdNH6x/abu-said.jpg" width="135px;" height="135px;" alt=""/><br /><b>Abu Said</b></a></td>
-            <td align="center"><a href="https://github.com/hhhrrrttt222111"><img src="https://hhhrrrttt222111.web.app/static/media/dp.5f7c380f.jpeg" width="135px;" height="135px;" alt=""/><br /><b>Hemanth R</b></a></td>
-        </tr>
-    </table>
-</div> -->
-
-<!--
-## Setting Up Contacts form :envelope_with_arrow:
-
-> ### Follow these [instructions](https://github.com/hhhrrrttt222111/developer-portfolio/wiki/Contacts) to connect contacts form with Google Sheet
-
-
-
-
-
-
-# Upcoming Features :construction:
-
-- Light/Dark theme toggle
-- More illustrations to choose from
-- Achievements and Awards section
-- More fonts to choose from
-
-<br /><br />
-
-## Raise an issue for...
-
-- Found a bug
-- New theme
-- Can't find required skill in Skills section
-- Add new social media profile
-- Add new service
-- Add another section
-
-
-<br /> -->
+MIT — Free to use and adapt for your own portfolio.

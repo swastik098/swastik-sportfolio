@@ -1,5 +1,5 @@
 /* ============================================
-   BASE STYLES
+   BASE STYLES — Dark Premium Theme
    ============================================ */
 
 body {
@@ -10,13 +10,11 @@ body {
   cursor: none;
 }
 
-/* Hide cursor on touch devices */
 @media (hover: none) {
   body { cursor: auto; }
   .cursor, .cursor-ring { display: none; }
 }
 
-/* Container */
 .container {
   width: 100%;
   max-width: var(--container);
@@ -24,13 +22,12 @@ body {
   padding-inline: 64px;
 }
 
-/* Section base */
 .section {
   padding-block: var(--space-3xl);
 }
 
 .section--dark {
-  background: var(--dark);
+  background: var(--darker);
   color: var(--text-light);
 }
 
@@ -38,14 +35,14 @@ body {
   background: var(--surface);
 }
 
-/* Typography */
 .section-title {
   font-family: var(--font-display);
-  font-size: clamp(36px, 4.5vw, 64px);
+  font-size: clamp(36px, 4.5vw, 62px);
   font-weight: 800;
   letter-spacing: -2px;
   line-height: 1.05;
   margin-bottom: var(--space-xl);
+  color: var(--text);
 }
 
 .section-title--light {
@@ -55,31 +52,31 @@ body {
 .body-text {
   font-size: 16px;
   color: var(--text-muted);
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .body-text strong {
-  color: var(--text);
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
-/* Eyebrow */
 .eyebrow {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 11px;
-  letter-spacing: 3px;
+  gap: 10px;
+  font-size: 10px;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: var(--space-md);
   font-weight: 500;
+  font-family: var(--font-mono);
 }
 
 .eyebrow::before {
   content: '';
   display: block;
-  width: 32px;
+  width: 28px;
   height: 1.5px;
   background: var(--accent);
   flex-shrink: 0;
@@ -89,7 +86,6 @@ body {
   color: var(--accent);
 }
 
-/* Link style */
 .link {
   color: var(--accent);
   text-decoration: none;
@@ -101,7 +97,6 @@ body {
   border-color: var(--accent);
 }
 
-/* Section header layout */
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -109,22 +104,20 @@ body {
   margin-bottom: var(--space-xl);
 }
 
-/* Status dot */
 .status-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
   background: var(--green);
   flex-shrink: 0;
-  animation: statusPulse 2s ease-in-out infinite;
+  animation: statusPulse 2.2s ease-in-out infinite;
 }
 
 @keyframes statusPulse {
-  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34,197,94,0.5); }
-  50% { opacity: 0.8; box-shadow: 0 0 0 5px rgba(34,197,94,0); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(74,222,128,0.5); }
+  50%       { opacity: 0.75; box-shadow: 0 0 0 6px rgba(74,222,128,0); }
 }
 
-/* Back to top */
 .back-to-top {
   position: fixed;
   bottom: 32px;
@@ -132,15 +125,20 @@ body {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: var(--dark);
-  color: #fff;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 80;
   opacity: 0;
   transform: translateY(16px);
-  transition: opacity var(--duration-md) var(--ease), transform var(--duration-md) var(--ease), background var(--duration-sm);
+  transition: opacity var(--duration-md) var(--ease),
+              transform var(--duration-md) var(--ease),
+              background var(--duration-sm),
+              border-color var(--duration-sm),
+              box-shadow var(--duration-sm);
   pointer-events: none;
   cursor: none;
   box-shadow: var(--shadow-md);
@@ -154,4 +152,21 @@ body {
 
 .back-to-top:hover {
   background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: var(--shadow-accent);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--amber) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glass {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
